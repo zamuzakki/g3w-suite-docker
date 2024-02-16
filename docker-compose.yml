@@ -28,7 +28,9 @@ services:
       internal:
 
   g3w-suite:
-    image: g3wsuite/g3w-suite:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       - DISPLAY=:99
       - G3WSUITE_TILECACHE_PATH

@@ -30,3 +30,5 @@ pip3 install -r /code/g3w-admin/qplotly/requirements.txt
 # Openrouteservice
 pip3 install -r /code/g3w-admin/openrouteservice/requirements.txt
 
+export DEB_PYTHON_INSTALL_LAYOUT=deb_system
+pip3 install git+https://github.com/g3w-suite/g3w-admin-ps-timeseries.git@v1.0.0-beta.3

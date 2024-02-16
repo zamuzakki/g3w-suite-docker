@@ -1,0 +1,77 @@
+{% load static %}
+<div id="home_wrapper">
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 home" style="height: 100%;">
+        <div class="home-block">
+            <div class="container" style="height: 100%;">
+                <div class="row" style="height: 100%;">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="height: 100%; background-color: #fff">
+                        <div class="container" style="height: 100%">
+                            <div class="row" style="height: 33.3%;"></div>
+                            <div class="row" style="height: 33.3%; padding-top: 70px;">
+                                <div class="col-lg-2 col-md-2">
+                                    <div class="home-content">
+                                        {% if generaldata.suite_logo %}
+                                        {% if generaldata.url_suite_logo %}
+                                        <a href="{{ generaldata.url_suite_logo }}" target="_blank">
+                                            {% endif %}
+                                            <img src="{{ MEDIA_URL }}{{ generaldata.suite_logo }}" alt="logo"><br>
+                                            {% if generaldata.url_suite_logo %}
+                                        </a>
+                                        {% endif %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 col-md-10">
+                                    <div class="container title-box" style="width: 150%">
+                                        {{ SETTINGS.FRONTEND_IMAGES_URL }}
+
+                                        <div class="row">
+                                            <h1 class="tk-source-sans-pro" style="position:relative; z-index: 1">{{ generaldata.title }}</h1>
+                                        </div>
+                                        <div class="row">
+                                            <div class="generaldata-subtitle">
+                                                {% if generaldata.sub_title != "Geosuite" %}
+                                                {{ generaldata.sub_title }}
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="height: 33.3%">
+                                <div class="col-lg-2 col-md-2">
+                                </div>
+                                <div class="col-lg-10 col-md-10">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div>
+                                                {% if powerd_by %}
+                                                <p style="color: #000; margin-left: 45px; position: fixed; bottom: 50px;">
+                                                    <span>Powered by</span></span>
+                                                    <a href="http://gis3w.it">
+                                                        <img src="{% static 'frontend/images/logo_gis3w.png' %}"></a>
+                                                </p>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="height: 100%;">
+                        <div class="container" style="height: 100%;">
+                            <div class="row" style="height: 50%; width: 50%; background: linear-gradient(to right top, #fff 50%, rgba(0,0,0,0) 50%)">
+                            </div>
+                            <div class="row" style="height: 50%; width: 50%; background: linear-gradient(to right bottom, #fff 50%, rgba(0,0,0,0) 50%)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIDEBAR left -->
+    {% include 'frontend/include/sidebar.html' %}
+</div>

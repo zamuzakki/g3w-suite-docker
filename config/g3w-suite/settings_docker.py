@@ -208,3 +208,7 @@ LOGGING = {
 }
 
 SESSION_COOKIE_NAME = 'gis3w-suite-dev-iehtgdb264t5gr'
+
+if str(os.getenv('FRONTEND')).lower() in ['true', 'yes', '1']:
+    FRONTEND = True
+    FRONTEND_APP = 'frontend'
