@@ -24,7 +24,8 @@ G3WADMIN_LOCAL_MORE_APPS = [
     # Uncomment if you wont activate the following module
     #'openrouteservice',
     'qtimeseries',
-    'frontend'
+    'frontend',
+    'qps_timeseries'
 ]
 
 DATABASES = {
@@ -208,3 +209,6 @@ LOGGING = {
 }
 
 SESSION_COOKIE_NAME = 'gis3w-suite-dev-iehtgdb264t5gr'
+
+FRONTEND = True
+FRONTEND_APP = 'frontend'
